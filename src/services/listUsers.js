@@ -20,22 +20,13 @@ const remove = (id) => {
   return http.delete(`/users/${id}`);
 };
 
-const removeAll = () => {
-  return http.delete(`/users`);
-};
-
-const findByTitle = (title) => {
-  return http.get(`/users?title=${title}`);
-};
 
 const ListUsers = {
   getAll,
   get,
   create,
   update,
-  remove,
-  removeAll,
-  findByTitle,
+  remove
 };
 
 export default ListUsers;
