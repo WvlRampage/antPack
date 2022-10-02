@@ -4,9 +4,9 @@ import './NoPage.css'
 
 const ErrorPage = () => {
   return (
-    <div class="containerNoPage">
-      <h1>An error as occured.</h1>
-      <h1> <span class="ascii">(╯°□°）╯︵ ┻━┻</span></h1>
+    <div className="containerNoPage">
+      <h1>Ha ocurrido un error.</h1>
+      <h1> <span className="ascii">(╯°□°）╯︵ ┻━┻</span></h1>
       <Button name="Regresar" navigate="/"/>
     </div>
   )
