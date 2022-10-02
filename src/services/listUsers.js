@@ -8,16 +8,17 @@ const get = (id) => {
   return http.get(`/users/${id}`);
 };
 
-const create = (data) => {
-  return http.post("/users", data);
+const create = async(data) => {
+  console.log(data)
+  return await http.post("/users", data);
 };
 
 const update = (id, data) => {
   return http.put(`/users/${id}`, data);
 };
 
-const remove = (id) => {
-  return http.delete(`/users/${id}`);
+const remove = async(id) => {
+  return await http.delete(`/users/${id}`);
 };
 
 

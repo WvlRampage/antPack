@@ -1,0 +1,44 @@
+.button {
+  height: 30px;
+  transition: 0.2s all;
+  cursor: pointer;
+  background-color: #ef4064;
+  border: 2px solid #fa7272;
+  color: white;  
+  border-radius: 5px;
+}
+
+.button:hover {
+  transition: all 0.2s ease, visibility 0s;
+  border-radius: 5px;
+  background: white;
+  border: 2px solid #ef475f;
+  color: black;
+  padding: auto;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.link:hover {
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.text {
+  font-family: 'Bodoni Moda', serif ;
+  font-size: 16px;
+  font-weight: 700;
+}

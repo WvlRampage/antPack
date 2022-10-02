@@ -1,4 +1,4 @@
-import ShowPersons from './views/ShowPersons';
+import ShowPersons from './views/ShowPersons/ShowPersons';
 
 function App() {
   return (
