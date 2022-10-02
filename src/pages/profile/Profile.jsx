@@ -7,39 +7,36 @@ import Gravatar from 'react-gravatar'
 import './profile.css'
 
 const Profile = () => {
-  const {updateUser} = useUsers()
+  const { updateUser } = useUsers()
   const location = useLocation()
   const user = location.state.data
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
   } = useForm();
 
-
   const createUSer = (data) => {
-    console.log(data)
-    updateUser(user.id,data)
+    updateUser(user.id, data)
   }
 
   return (
     <div className="containerForm">
-      <h1 style={{ fontSize: 40 }}>Actualizar Usuario</h1>      
+      <h1 style={{ fontSize: 40 }}>Actualizar Usuario</h1>
       <form className="formStyle" onSubmit={handleSubmit(createUSer)}>
         <Gravatar email={user.email} />
-        <input className="input-style" value={user.name||""}  onChange={(e) => console.log(e)} {...register('firstName', { required: true })} />
+        <input className="input-style" defaultValue={user.name || ""}  {...register('firstName', { required: true })} />
         {errors.firstName && <p className="p-style">Nombre es requerido.</p>}
-        <input className="input-style" value={user.email||""} type="email" {...register('email', { required: true })} />
+        <input className="input-style" defaultValue={user.email || ""} type="email" {...register('email', { required: true })} />
         {errors.email && <p className="p-style">Correo es requerido.</p>}
-        <input className="input-style" value={user.address.city||""} {...register('city', { required: true })} />
+        <input className="input-style" defaultValue={user.address.city || ""} {...register('city', { required: true })} />
         {errors.city && <p className="p-style">Ciudad es requerido.</p>}
-        <input className="input-style" value={user.company.name||""} {...register('companyName', { required: true })} />
+        <input className="input-style" defaultValue={user.company.name || ""} {...register('companyName', { required: true })} />
         {errors.companyName && <p className="p-style">Nombre de la compañia es requerido.</p>}
         <Button name={"Actualizar"} marginLeft={10} />
       </form>
       <div className="divBtnRegresar">
-        <Button name={"Regresar"} navigate="/showPersons"/>
+        <Button name={"Regresar"} navigate="/showPersons" />
       </div>
     </div>
   )
